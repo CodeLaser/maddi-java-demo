@@ -31,10 +31,13 @@ The classes are adapted from the test batteries of `maddi-modification-analyzer`
 
 ## Annotations the IDE does not show today
 
-As of 2026-10-27, so that a missing hint is not mistaken for a broken plugin:
+As of 2026-10-27 (regenerated after the fixes of that day), so that a missing hint is not mistaken for a broken plugin:
 
-- **Nullability:** `@Nullable` also appears on parameters that no call passes null to (`Bag.add`, `Sentence.word`,
-  `Person.setName` and others). `Lookup` itself comes out as intended.
+- **Nullability:** a public parameter whose method accepts null without failing is `@Nullable`, even when no call
+  passes null (maddi-mod#68): concatenated (`Tags.tag`), appended to a `StringBuilder` (`Sentence.word`,
+  `Report.line`), tested for null (`Checks.orDefault`), or stored where null is already possible (`Person.setName`).
+  A parameter stored into a field's list that holds no null stays `@NotNull` (`Bag.add`). `Lookup` itself comes out
+  as intended.
 - **Contracts the analyzer reads but the IDE does not echo:** `@UtilityClass` (`ListTools`), `@Commutable`
   (`Ranges`), `@AllowsInterrupt` (`Worker`).
 - **Not used by the analyzer at all:** `@Singleton` (`Clock`), `@ExtensionClass` (`Strings`), `@BeforeMark`;

@@ -30,8 +30,8 @@ After an analyzer change, the differences from this file are the point of the ex
 | edit(String) | `@Only(before="text")`, `@Modified` *(hidden by default)* |
 | isCommitted() | `@NotModified`, `@TestMark("text")` |
 | length() | `@NotModified(after="text")`, `@Modified` *(hidden by default)* |
-| param s of commit(String) | `@Nullable` |
-| param s of edit(String) | `@Nullable` |
+| param s of commit(String) | `@NotNull` *(hidden by default)* |
+| param s of edit(String) | `@NotNull` *(hidden by default)* |
 
 ## `demo.guard.WrongContainer`
 
@@ -48,7 +48,7 @@ After an analyzer change, the differences from this file are the point of the ex
 | (type) | `@Container`, `@Independent`, `@FinalFields` |
 | field items | `@Independent`, `@Modified`, `@NotNull` *(hidden by default)* |
 | add(String) | `@Modified` *(hidden by default)* |
-| param s of add(String) | `@Nullable` |
+| param s of add(String) | `@NotNull` *(hidden by default)* |
 
 ## `demo.immutable.Circle`
 
@@ -144,7 +144,7 @@ After an analyzer change, the differences from this file are the point of the ex
 | copy() | `@Independent`, `@NotModified`, `@NotNull` *(hidden by default)* |
 | exposed() | `@NotModified`, `@GetSet("items")`, `@Dependent` *(hidden by default)*, `@NotNull` *(hidden by default)* |
 | view() | `@UnmodifiableView`, `@NotModified`, `@Dependent` *(hidden by default)*, `@NotNull` *(hidden by default)* |
-| param item of add(String) | `@Nullable` |
+| param item of add(String) | `@NotNull` *(hidden by default)* |
 
 ## `demo.independence.Wrapper`
 
@@ -155,7 +155,7 @@ After an analyzer change, the differences from this file are the point of the ex
 | append(String) | `@Modified` *(hidden by default)* |
 | list() | `@NotModified`, `@GetSet("list")`, `@Dependent` *(hidden by default)*, `@NotNull` *(hidden by default)* |
 | param list of constructor(List) | `@Modified`, `@Dependent` *(hidden by default)*, `@NotNull` *(hidden by default)* |
-| param s of append(String) | `@Nullable` |
+| param s of append(String) | `@NotNull` *(hidden by default)* |
 
 ## `demo.method.Checks`
 
@@ -209,7 +209,7 @@ After an analyzer change, the differences from this file are the point of the ex
 | add(String) | `@Modified` *(hidden by default)* |
 | contains(String) | `@NotModified` |
 | size() | `@NotModified` |
-| param item of add(String) | `@Nullable` |
+| param item of add(String) | `@NotNull` *(hidden by default)* |
 | param item of contains(String) | `@NotNull` *(hidden by default)* |
 
 ## `demo.modification.Counter`
@@ -267,7 +267,7 @@ After an analyzer change, the differences from this file are the point of the ex
 | lookup(String) | `@Independent`, `@NotModified`, `@Nullable` |
 | register(String,int) | `@Modified` *(hidden by default)* |
 | param name of lookup(String) | `@NotNull` *(hidden by default)* |
-| param name of register(String,int) | `@Nullable` |
+| param name of register(String,int) | `@NotNull` *(hidden by default)* |
 
 ## `demo.nullability.Lookup`
 
@@ -294,7 +294,7 @@ After an analyzer change, the differences from this file are the point of the ex
 | add(int) | `@Modified` *(hidden by default)* |
 | log(String) | `@IgnoreModifications`, `@Modified` *(hidden by default)* |
 | twice(int) | `@NotModified` |
-| param s of log(String) | `@Nullable` |
+| param s of log(String) | `@NotNull` *(hidden by default)* |
 
 ## `demo.rare.Clock`
 
