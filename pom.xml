@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.codelaser.demo</groupId>
+    <artifactId>maddi-java-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>maddi Java demo</name>
+    <description>Small classes that show every maddi annotation, for trying the IDE plugins by hand.</description>
+
+    <properties>
+        <maven.compiler.release>21</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maddi.version>0.9.5</maddi.version>
+    </properties>
+
+    <dependencies>
+        <!-- the annotations, for the contracts some classes write by hand -->
+        <dependency>
+            <groupId>io.codelaser</groupId>
+            <artifactId>maddi-annotation</artifactId>
+            <version>${maddi.version}</version>
+        </dependency>
+        <!-- SetOnce and EventuallyFinalOnDemand, for the eventually immutable classes -->
+        <dependency>
+            <groupId>io.codelaser</groupId>
+            <artifactId>maddi-support</artifactId>
+            <version>${maddi.version}</version>
+        </dependency>
+    </dependencies>
+</project>
