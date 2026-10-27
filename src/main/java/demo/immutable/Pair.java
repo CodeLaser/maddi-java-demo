@@ -2,7 +2,8 @@ package demo.immutable;
 
 /**
  * Immutable, but with hidden content: the analyzer cannot see inside {@code A} and {@code B}. Look for:
- * {@code @ImmutableContainer(hc=true)} on the type, and {@code @Independent(hc=true)} on the accessors.
+ * {@code @ImmutableContainer(hc=true)} on the type. The accessors' {@code @Independent(hc=true)} follows from it,
+ * so the hints show it under <em>Show all</em>.
  */
 public final class Pair<A, B> {
     private final A first;

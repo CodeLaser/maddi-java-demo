@@ -99,7 +99,7 @@ After an analyzer change, the differences from this file are the point of the ex
 
 | Declaration | Hints |
 |---|---|
-| (type) | `@ImmutableContainer(hc=true)`, `@Independent` |
+| (type) | `@Independent` |
 | area() | `@NotModified` *(hidden by default)* |
 
 ## `demo.immutable.Snapshot`
@@ -196,8 +196,8 @@ After an analyzer change, the differences from this file are the point of the ex
 | (type) | `@Container`, `@Independent`, `@FinalFields` |
 | field sb | `@Independent`, `@Modified`, `@NotNull` *(hidden by default)* |
 | build() | `@NotModified`, `@NotNull` *(hidden by default)* |
-| period() | `@Fluent`, `@Independent`, `@Modified` *(hidden by default)*, `@NotNull` *(hidden by default)* |
-| word(String) | `@Fluent`, `@Independent`, `@Modified` *(hidden by default)*, `@NotNull` *(hidden by default)* |
+| period() | `@Fluent`, `@Independent` *(hidden by default)*, `@Modified` *(hidden by default)*, `@NotNull` *(hidden by default)* |
+| word(String) | `@Fluent`, `@Independent` *(hidden by default)*, `@Modified` *(hidden by default)*, `@NotNull` *(hidden by default)* |
 | param w of word(String) | `@Nullable` |
 
 ## `demo.modification.Bag`
@@ -292,7 +292,7 @@ After an analyzer change, the differences from this file are the point of the ex
 | (type) | `@Container`, `@Independent`, `@Mutable` *(hidden by default)* |
 | field buffer | `@Independent`, `@Modified`, `@NotNull` *(hidden by default)* |
 | add(int) | `@Modified` *(hidden by default)* |
-| log(String) | `@IgnoreModifications`, `@Modified` *(hidden by default)* |
+| log(String) | `@Modified` *(hidden by default)* |
 | twice(int) | `@NotModified` |
 | param s of log(String) | `@NotNull` *(hidden by default)* |
 
@@ -310,8 +310,8 @@ After an analyzer change, the differences from this file are the point of the ex
 |---|---|
 | (type) | `@Container`, `@Independent`, `@FinalFields` |
 | field sb | `@Independent`, `@Modified`, `@NotNull` *(hidden by default)* |
-| build() | `@NotModified`, `@Finalizer`, `@NotNull` *(hidden by default)* |
-| line(String) | `@Fluent`, `@Independent`, `@Modified` *(hidden by default)*, `@NotNull` *(hidden by default)* |
+| build() | `@NotModified`, `@NotNull` *(hidden by default)* |
+| line(String) | `@Fluent`, `@Independent` *(hidden by default)*, `@Modified` *(hidden by default)*, `@NotNull` *(hidden by default)* |
 | param s of line(String) | `@Nullable` |
 
 ## `demo.rare.Settings`

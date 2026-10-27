@@ -5,9 +5,9 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Three ways to hand out a field. Look for: {@code @Dependent} on {@code exposed()} (the caller can change the
- * inventory through it), {@code @Independent} on {@code copy()}, and {@code @UnmodifiableView} on {@code view()},
- * which is still {@code @Dependent}: the view shows later changes.
+ * Three ways to hand out a field. Look for: {@code @Independent} on {@code copy()}, and {@code @UnmodifiableView} on
+ * {@code view()}. {@code exposed()} (the caller can change the inventory through it) and {@code view()} (it shows
+ * later changes) are {@code @Dependent}, the default, which the hints show under <em>Show all</em>.
  */
 public class Inventory {
     private final List<String> items = new ArrayList<>();
