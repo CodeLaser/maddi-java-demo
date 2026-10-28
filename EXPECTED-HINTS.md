@@ -5,7 +5,7 @@ daemon sends them. *Hidden by default* marks a context default: the plugin's def
 context defaults") leaves it out, while the gutter and "Show all" keep it. Declarations without any verdict are
 not listed.
 
-Produced on 2026-10-27 by running the daemon's analysis (maddi 0.9.6 development build) over `src/main/java`.
+Produced on 2026-10-28 by running the daemon's analysis (maddi 0.9.6 development build) over `src/main/java`.
 After an analyzer change, the differences from this file are the point of the exercise.
 
 ## `demo.eventual.Config`
@@ -354,4 +354,4 @@ After an analyzer change, the differences from this file are the point of the ex
 ## Guard findings
 
 - `guard/WrongContainer.java:13`: parameter 'target' of demo.guard.WrongContainer.fill(java.util.List) is modified, violating the @Container contract on demo.guard.WrongContainer
-- `guard/WrongImmutable.java:14`: field 'items' of demo.guard.WrongImmutable is modified, violating rule 1 (all fields @NotModified) of the @Immutable contract on demo.guard.WrongImmutable
+- `guard/WrongImmutable.java:17`: Method 'add' modifies field 'items' ('items.add(...)'), violating rule 1 (all fields @NotModified) of the @Immutable contract on demo.guard.WrongImmutable
