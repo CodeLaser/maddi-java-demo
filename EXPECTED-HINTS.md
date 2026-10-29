@@ -5,7 +5,7 @@ daemon sends them. *Hidden by default* marks a context default: the plugin's def
 context defaults") leaves it out, while the gutter and "Show all" keep it. Declarations without any verdict are
 not listed.
 
-Produced on 2026-10-28 by running the daemon's analysis (maddi 0.9.6 development build) over `src/main/java`.
+Produced on 2026-10-29 by running the daemon's analysis (maddi 0.9.6 development build) over `src/main/java`.
 After an analyzer change, the differences from this file are the point of the exercise.
 
 ## `demo.eventual.Config`
@@ -319,7 +319,7 @@ After an analyzer change, the differences from this file are the point of the ex
 | Declaration | Hints |
 |---|---|
 | (type) | `@Container`, `@Independent`, `@Mutable` *(hidden by default)* |
-| raise() | `@NotModified` |
+| raise() | `@Modified` *(hidden by default)* |
 
 ## `demo.rare.SettingsClient`
 
