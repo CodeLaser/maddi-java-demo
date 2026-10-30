@@ -13,6 +13,14 @@ The classes are adapted from the test batteries of `maddi-modification-analyzer`
 
 - **IntelliJ IDEA:** *File → Open* on this directory, as a Maven project. Install the maddi plugin, set its JDK (25 or
   later) under *Settings → Tools → maddi*, then *Tools → Analyze with maddi*.
+- **Eclipse** (2025-09 or later, with its Maven support, as in *Eclipse IDE for Java Developers*):
+  1. *File → Import… → Maven → Existing Maven Projects*, root directory this one, tick `pom.xml`, *Finish*;
+  2. install the maddi plugin (*Help → Install New Software…*), and have a JDK 25 or later under *Preferences →
+     Java → Installed JREs*, or choose one under *Preferences → maddi*;
+  3. turn on *Preferences → Java → Editor → Code Minings → Enable code minings*: Eclipse draws maddi's hints as code
+     minings, which are off by default;
+  4. right-click the project, *Analyze with maddi*. *Window → Show View → Other… → maddi → maddi Findings* shows the
+     run and the two guard findings of `demo.guard`.
 - Builds with `mvn compile` on JDK 21 or later. The only dependencies are `io.codelaser:maddi-annotation` and
   `io.codelaser:maddi-support` 0.9.5 from Maven Central, for the contracts and the eventually immutable classes.
 
